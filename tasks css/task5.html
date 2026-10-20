@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation that stays at the top</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+
+    <!-- Sticky Header (الناڤبار المثبت أعلى الصفحة) -->
+    <header class="sticky-nav">
+        <!-- الشريط الأسود العلوي -->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <strong>Foundry Academy</strong>
+                <span>Frontend engineering, taught by practice</span>
+            </div>
+            <div class="top-bar-right">
+                <span class="badge">Autumn intake is open</span>
+            </div>
+        </div>
+
+        <!-- القائمة البيضاء السفلى -->
+        <div class="main-nav">
+            <div class="logo">
+                <span class="logo-box"></span>
+                <strong>Foundry</strong>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Courses</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Content (المحتوى بدون بوردات يملأ الصفحة) -->
+    <main class="page-wrapper">
+
+        <!-- Hero Title -->
+        <section class="hero-section">
+            <h1>Twelve weeks from first line to first release</h1>
+            <p>Follow one curriculum, ship one real product, review it with a mentor every Friday.</p>
+            <button class="btn btn-blue">See the syllabus</button>
+        </section>
+
+        <!-- Timeline / Weeks Sections -->
+        <section class="timeline">
+
+            <div class="timeline-item">
+                <span class="week-tag">WEEK 01-02</span>
+                <h2>Structure before style</h2>
+                <p>Learn to read a design and name its parts before touching a single colour. You will rebuild three real-pages from scratch and compare your structure against the original.</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="week-tag">WEEK 03-05</span>
+                <h2>Components that survive contact</h2>
+                <p>Add behavior without losing the layout: open menus, focus traps, scroll regions, and the small details that make an interface feel deliberate.</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="week-tag">WEEK 08-10</span>
+                <h2>Working to a design system</h2>
+                <p>Take someone else's tokens and components and build inside their rules, which is what most of the job actually looks like.</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="week-tag">WEEK 11-12</span>
+                <h2>Ship and review</h2>
+                <p>Finish one product, write the release notes, and defend your decisions in a live review with a working engineer.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

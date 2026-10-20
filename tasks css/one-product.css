@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 320px;
+    position: relative;
+    background-color: white;
+    border: 1px solid #dce2e8;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+/* Image */
+
+.card-image {
+    width: 100%;
+    height: 230px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+/* Heart - top left */
+
+.icons {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    z-index: 2;
+}
+
+.icons button {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #dce2e8;
+    border-radius: 50%;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.icons i {
+    font-size: 17px;
+    color: #263746;
+}
+
+/* Sale - top right */
+
+.sale {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 3;
+}
+
+.sale span {
+    display: block;
+
+    background-color: #1677b8;
+
+   
+    border-radius: 4px;
+
+    padding: 7px 10px;
+
+    color: #ffff;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Content */
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content > span {
+    display: block;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #263746;
+
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #7a8793;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+/* Prices */
+
+.card-bottom {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.card-bottom > strong {
+    font-size: 22px;
+    color: #263746;
+}
+
+.dashed {
+    border: #7a8793;
+    padding: 4px 8px;
+}
+
+.dashed strong {
+    font-size: 13px;
+    color: #7a8793;
+    text-decoration: line-through;
+}
+
+/* Add to cart */
+
+.card-content > button {
+    width: 100%;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #1677b8;
+    color: white;
+
+    padding: 11px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}

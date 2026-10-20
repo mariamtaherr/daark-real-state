@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+        height: 50vh;
+
+}
+body {
+    background-color: #fafbfc;
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+/* 1. Sticky Navigation (تثبيت الهيدر أعلى الشاشة) */
+.sticky-nav {
+    position: sticky;
+    
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* الشريط الأسود فوق */
+.top-bar {
+    background-color: #0d1117;
+    color: #9ca3af;
+    padding: 30px 60px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.top-bar strong {
+    color: #ffffff;
+    margin-right: 8px;
+}
+
+.badge {
+    background-color: #1f2937;
+    color: #d1d5db;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+}
+
+/* القائمة البيضاء تحته */
+.main-nav {
+    display: flex;
+    align-items: center;
+    padding: 16px 60px;
+    background-color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.logo-box {
+    width: 14px;
+    height: 14px;
+    background-color: #2b78a3;
+    border-radius: 3px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    margin-left: 45px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.nav-links a.active, 
+.nav-links a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+/* 2. Page Content (مالئ الصفحة وبدون بوردات) */
+.page-wrapper {
+    width: 100%;
+    padding: 60px 60px 150px;
+    
+}
+
+/* Hero Section */
+.hero-section {
+    margin-bottom: 50px;
+}
+
+.hero-section h1 {
+    font-size: 38px;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.hero-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.btn-blue {
+    background-color: #2b78a3;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-blue:hover {
+    background-color: #1e597a;
+}
+
+/* Timeline Items (الأسابيع) */
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    border-top: 1px solid #e5e5e5;
+    padding: 30px 0;
+}
+
+.week-tag {
+    font-size: 11px;
+    font-weight: bold;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+.timeline-item h2 {
+    font-size: 20px;
+    color: #111;
+    margin: 6px 0 8px;
+}
+
+.timeline-item p {
+    font-size: 14px;
+    color: #666;
+    max-width: 800px;
+}

@@ -1,0 +1,958 @@
+:root {
+  --primary-color: #000000;
+  --primary-hover:#fd7e14 ;
+  --accent-pink:rgba(118, 60, 73, 0.5);
+  --white:#ffff;
+  --text-main:#f05b09 ;
+  --text-muted: #babcc0;
+  --bg-dark: #060607;
+  --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif, arial;
+    background-color: var(--white);
+}
+hr{
+    background-color: var(--text-muted);
+    
+}
+.top-bar{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.email-top,
+.address-top{
+      display:flex;
+      align-items: center;
+      gap: 10px;
+}
+.email-top i,
+.address-top i{
+    color: var(--text-main);
+}
+.top-bar p{
+    font-size:14px;
+    color: var(--text-muted);
+}
+.right-top-bar{
+    display:flex;
+flex-direction: row;
+gap: 30px;
+
+}
+.left-top-bar a{
+display: flex;
+background-color: var(--text-muted);
+border-radius: 50px;
+text-decoration: none;
+width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+}
+.left-top-bar :hover{
+    cursor: pointer;
+    background-color: var(--primary-hover);
+    
+}
+.left-top-bar a i{
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.left-top-bar{
+    display: flex;
+    align-items: center;
+gap: 20px;
+
+}
+ nav {
+    position: sticky;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px ;
+    background-color: var(--white);
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--primary-hover);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding:  20px ;
+    border-radius: 50px;
+}
+
+
+#schedule-icon {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav-btn{
+transition: .3s;
+}
+#nav-btn :hover{
+    cursor: pointer;
+   span{
+    color: var(--primary-hover);
+   }
+
+}
+.hero {
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*hero-banner */
+.slide {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+
+    opacity: 0;
+
+    animation: villaSlider 12s infinite;
+}
+
+/*first-image*/
+.slide-1 {
+    background-image: url("https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/banner-01.jpg");
+    animation-delay: 0s;
+}
+
+/* second */
+.slide-2 {
+    background-image: url("https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/banner-02.jpg");
+    animation-delay: 4s;
+}
+
+/*third*/
+.slide-3 {
+    background-image: url("https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/banner-03.jpg");
+    animation-delay: 8s;
+}
+
+
+/* annimation*/
+@keyframes villaSlider {
+
+    0% {
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    38% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*hero text*/
+.hero-content {
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content p {
+    background-color: var(--white);
+    color: var(--primary-color);
+    display: inline-block;
+    padding: 8px 15px;
+    margin-bottom: 25px;
+}
+
+.hero-content h2 {
+    font-size: 60px;
+    line-height: 1.15;
+    color:var(--white);
+}
+/*
+   FEATURED SECTION
+ */
+
+.featured {
+    width: 90%;
+    max-width: 1200px;
+    margin: 120px auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.featured-image {
+    position: relative;
+}
+
+.featured-image img {
+    width: 100%;
+    display: block;
+}
+
+.featured-icon {
+    position: absolute;
+    bottom: -35px;
+    left: -35px;
+    width: 75px;
+    height: 75px;
+    background-color: var(--primary-hover);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-icon img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.section-label {
+    color: var(--text-main);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.featured-content h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.featured-box {
+    border-bottom: 1px solid var(--text-muted);
+    padding: 20px 0;
+}
+
+.featured-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.featured-box p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.featured-info {
+    box-shadow: var(--card-shadow);
+    background-color: var(--white);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    border-bottom: 1px solid var(--text-muted);
+}
+
+.info-item img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.info-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.info-item p {
+    color: var(--text-muted);
+}
+
+
+/*VIDEO SECTION*/
+
+.video-section {
+    position: relative;
+    padding: 100px 5%;
+    overflow: hidden;
+
+    background-image:
+        url("https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/video-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*Blur */
+
+.video-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        url("https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/video-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(8px);
+
+    transform: scale(1.05);
+
+    z-index: 0;
+}
+
+
+
+
+.video-section::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 1;
+}
+
+
+/* above content*/
+
+.video-heading,
+.video-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/*address*/
+
+.video-heading {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.video-heading h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+
+/* vid*/
+
+.video-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+
+    position: relative;
+
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-container img {
+    width: 100%;
+    
+    display: block;
+}
+
+
+
+
+.play-button {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 70px;
+    height: 70px;
+
+    background-color: var(--text-main);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.play-button i {
+    color: var(--white);
+    font-size: 22px;
+}
+
+/*best  deal*/
+.best-deal {
+    
+    width: 90%;
+    max-width: 1200px;
+    margin: 120px auto;
+}
+
+
+
+
+.deal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.deal-title h2 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+
+
+
+.deal-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.deal-tabs input {
+    display: none;
+}
+
+.deal-tabs label {
+    padding: 15px 25px;
+    background-color: var(--bg-dark);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* btn color*/
+
+#apartment:checked + label,
+#villa:checked + label,
+#penthouse:checked + label {
+    background-color:var(--text-main);
+}
+
+
+/*DEAL CONTENT*/
+
+.deal-content {
+    display: none;
+
+    grid-template-columns:
+        0.5fr
+        1.5fr
+        1fr;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+
+/* Apartment*/
+
+.apartment-content {
+    display: grid;
+}
+
+
+/* Villa */
+
+body:has(#villa:checked) .apartment-content {
+    display: none;
+}
+
+body:has(#villa:checked) .villa-content {
+    display: grid;
+}
+
+
+/* Penthouse  */
+
+body:has(#penthouse:checked) .apartment-content {
+    display: none;
+}
+
+body:has(#penthouse:checked) .penthouse-content {
+    display: grid;
+}
+
+
+/*DEAL INFO*/
+
+.deal-info {
+    box-shadow:var(--card-shadow);
+    
+}
+
+.deal-info div {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 22px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.deal-info span {
+    color: var(--text-muted);
+}
+
+.deal-info strong {
+    color:var(--bg-dark);
+}
+
+
+/*IMAGE*/
+
+.deal-image img {
+    width: 100%;
+    display: block;
+}
+
+
+/* DESCRIPTION*/
+
+.deal-description h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.deal-description p {
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+.schedule-btn {
+    border: none;
+    background-color: var(--bg-dark);
+    color: var(--white);
+
+    padding: 15px 22px;
+
+    border-radius: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.schedule-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.schedule-btn i {
+    margin-right: 8px;
+}
+/* PROPERTIES */
+
+.properties {
+    width: 90%;
+    max-width: 1200px;
+    margin: 120px auto;
+}
+
+.properties-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.properties-heading h2 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.property-card {
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.property-card  img {
+    width: 100%;
+    height: 230px;
+    
+    display: block;
+}
+
+.property-content {
+    padding: 25px;
+}
+
+.property-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.property-top span {
+    background-color: var(--text-muted);
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.property-top strong {
+    color: var(--text-main);
+    font-size: 20px;
+}
+
+.property-content h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.property-details {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--text-muted);
+    flex-wrap: wrap;
+}
+
+.property-details span {
+    font-size: 13px;
+    color: #777;
+}
+
+.property-details b {
+    color: var(--bg-dark);
+}
+
+.property-content button {
+    display: block;
+    margin: 25px auto 0;
+
+    border: none;
+    background-color: var(--bg-dark);
+    color: var(--white);
+
+    padding: 12px 25px;
+    border-radius: 25px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.property-content button:hover,
+.schedule-btn:hover {
+    background-color: var(--primary-hover);
+}
+/* CONTACT*/
+
+.contact {
+    width: 90%;
+    max-width: 1200px;
+    margin: 120px auto;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 60px;
+    
+}
+
+.contact-heading h2 {
+    font-size: 35px;
+    line-height: 1.2;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+}
+
+.contact-item {
+
+    display: flex;
+    border-radius: 25px;
+    align-items: center;
+    gap: 15px;
+    width: 200px;
+    height: 100px;
+
+    box-shadow: var(--card-shadow);
+}
+
+
+.contact-item i {
+    color: var(--primary-hover);
+    font-size: 30px;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.contact-form {
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    border-radius: 10px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+
+    border: 1px solid var(--text-muted);
+    border-radius: 40px;
+
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    resize:vertical ;
+}
+
+.contact-form button {
+    border: none;
+    background-color:var(--primary-color);
+    color: var(--white);
+    padding: 14px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color:var(--primary-hover);
+}
+/*  FOOTER */
+
+footer {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 35px;
+}
+
+.footer-content {
+    width: 100%;
+   
+    
+    
+    display: flex;
+   
+    
+    flex-direction: row;
+
+}
+
+
+
+.footer-content p {
+    
+    margin: auto;
+    color: var(--white);
+    line-height: 1.7;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.footer-content a {
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   color: var(--white);
+
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-content a:hover {
+    color:var(--primary-hover) ;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .menu ul {
+        gap: 15px;
+    }
+
+    .featured {
+        grid-template-columns: 1fr;
+    }
+
+    .deal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .deal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+
+
+}@media (max-width: 600px) {
+
+    .top-bar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        height: 550px;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deal-tabs {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .deal-tabs label {
+        width: 100%;
+        text-align: center;
+    }
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .featured,
+    .properties,
+    .contact,
+    .best-deal {
+        width: 90%;
+    }
+
+}

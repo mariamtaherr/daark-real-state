@@ -1,0 +1,860 @@
+
+:root {
+  --primary-color: #eb6280;
+  --primary-hover: #1f6fd0;
+  --accent-blue: #1e6cea;
+  --text-main: #000000;
+  --text-muted: #8d939b;
+  --muted-background:#f7f7f7;
+  --white:#ffff;
+  --bg-dark: #19212b;
+  --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    width: 95%;
+    
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color:var(--accent-blue);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 110px;
+    display: block;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.menu a {
+    color:var(--white);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.menu li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.menu li button {
+    border: none;
+    background: var(--primary-color);
+    border-radius: 50px;
+    font-size:17px;
+    font-weight: bold;
+}
+/*hero*/
+.hero {
+    
+    height: 100vh;
+    background-color: var(--accent-blue);
+    padding: 70px 0 120px;
+    border-radius: 0 0 150px 150px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h6 {
+    color: var(--white);
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    color: var(--white);
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+
+.hero-text p {
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+.search-box {
+    margin-top: 60px;
+    position: relative;
+    width: 450px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 150px 0 25px;
+    font-size: 14px;
+}
+
+.search-box button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 55px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.search-box button:hover{
+    background-color: var(--primary-hover);
+}
+
+.hero-image {
+    width:45%;
+    left: 70px;
+    position: relative;
+}
+
+.hero-image img {
+    width: 80%;
+    padding-right: 0;
+    display: block;
+    border-radius: 25px;
+}
+
+.price {
+    position: absolute;
+    top: 18px;
+    right: 100px;
+    background-color: var(--primary-hover);
+    color: var(--white);
+    font-size: 22px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.discount {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+/*features*/
+.features {
+    margin-top: -50px;
+    position: relative;
+    z-index: 5;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background:var(--white);
+    min-height: 170px;
+    border-radius: 25px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+
+.feature-icon {
+    width: 90px;
+    height: 90px;
+    background-color: var(--primary-hover);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.feature-icon:hover{
+    background-color: var(--primary-color);
+}
+
+.feature-icon img {
+    width: 44px;
+}
+
+.feature-card h4 {
+    color: var(--text-main);
+    font-size: 18px;
+}
+
+/*trending games*/
+.section {
+    padding: 100px 0;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.section-heading h6 {
+    color: var(--primary-color);
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    font-weight:300px;
+    color: var(--text-main);
+    font-weight: bolder;
+}
+
+.view-all,
+.main-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.game-card {
+    background-color: var(--muted-background);
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+.game-image {
+    position: relative;
+}
+
+.game-image img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.game-price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--primary-hover);
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.game-price del {
+    display: block;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.game-info {
+    position: relative;
+    padding: 25px 20px;
+}
+
+.game-info span {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.game-info h4 {
+    color: var(--text-main);
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.cart:hover {
+   background-color: var(--primary-hover);
+}
+.view-all:hover{
+       background-color: var(--primary-hover);
+
+}
+/*most-played*/
+.most-played {
+    background-color: var(--muted-background);
+    border-radius: 100px;
+}
+
+.most-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+
+}
+
+.played-card {
+    background-color: var(--white);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.played-image img {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    display: block;
+}
+
+.played-info {
+    text-align: center;
+    padding: 20px;
+font-weight: bold;
+}
+
+.played-info span {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+.played-info h4:hover{
+    color: var(--primary-hover);
+}
+
+.played-info h4 {
+    font-size: 17px;
+    margin: 8px 0 18px;
+    transition: .5s;
+}
+
+.played-info a {
+    display: inline-block;
+    color: white;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    transition: 0.5s;
+    
+}
+
+.played-info a:hover{
+    background-color: var(--primary-hover);
+}
+/*category*/
+.center {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background-color: var(--accent-blue);
+    border-radius: 25px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.category-card h4 {
+    color: white;
+    padding: 20px 10px;
+    font-size: 18px;
+}
+
+.category-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+/*cta*/
+
+.cta-section {
+    padding: 100px 0;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: end;
+}
+
+.shop-box,
+.subscribe-box {
+    padding: 50px;
+    border-radius: 25px;
+    width:75%
+}
+
+.shop-box {
+    background-color: var(--muted-background);
+}
+
+.subscribe-box {
+    background-color: var(--muted-background);
+}
+
+.cta-grid p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin: 30px;
+    font-weight: 200;
+}
+
+.section-heading em {
+    color: var(--primary-hover);
+    font-style: normal;
+}
+
+.subscribe-form {
+    position: relative;
+    margin-top: 30px;
+}
+
+.subscribe-form input {
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 170px 0 25px;
+}
+
+.subscribe-form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 55px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: var(--accent-blue);
+    color: var(--white);
+    text-align:center;
+    padding: 60px 0;
+    border-radius: 100px 100px 0 0;
+}
+
+footer p {
+    line-height: 1.8;
+}
+footer a {
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.5s;
+}
+footer a:hover{
+color: var(--text-muted);
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .most-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .hero-text {
+        width: 50%;
+    }
+
+    .hero-image {
+        width: 45%;
+        left: 0;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .menu ul {
+        gap: 5px;
+    }
+
+    .menu a {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu ul {
+        gap: 5px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 50px 0 100px;
+        border-radius: 0 0 80px 80px;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 450px;
+        margin: 40px auto 0;
+    }
+
+    .hero-image {
+        left: 0;
+        max-width: 600px;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    .price {
+        right: 20px;
+    }
+
+    .discount {
+        left: 0;
+    }
+
+    .features {
+        margin-top: -30px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 0;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-top {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .most-played {
+        border-radius: 60px;
+    }
+
+    .most-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+    }
+
+    nav {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .menu ul {
+        gap: 3px;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .menu li:not(:last-child) {
+        display: none;
+    }
+
+    .hero {
+        padding: 40px 0 80px;
+        border-radius: 0 0 60px 60px;
+    }
+
+    .hero-content {
+        gap: 40px;
+    }
+
+    .hero-text h6 {
+        font-size: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        padding-left: 20px;
+        padding-right: 120px;
+    }
+
+    .search-box button {
+        padding: 0 18px;
+        font-size: 13px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    .price {
+        top: 15px;
+        right: 15px;
+        font-size: 18px;
+    }
+
+    .discount {
+        width: 65px;
+        height: 65px;
+        bottom: -15px;
+        left: -5px;
+        font-size: 15px;
+    }
+
+    .features {
+        margin-top: -20px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+    }
+
+    .feature-card {
+        min-height: 150px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-top {
+        flex-direction: column;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .games-grid,
+    .most-grid,
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .shop-box,
+    .subscribe-box {
+        padding: 30px;
+    }
+
+    .subscribe-form input {
+        padding-right: 25px;
+    }
+
+    .subscribe-form button {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
